@@ -2,24 +2,13 @@ server:
   port: 7159
 
 
-#name:
-#  wwl:
-#    demo:
-#      activemq:
-#        pojo:
-#          jms-server:
-#            host: failover:(tcp://192.168.136.26:61616,tcp://192.168.136.27:61616,tcp://192.168.136.28:61616)
-#            topic: memberCome
-#            clientId: 100
-#            userName: laosun
-#            password: laosun
 spring:
   jms:
     pub-sub-domain: true
   activemq:
-    broker-url: failover:(tcp://192.168.136.26:61616,tcp://192.168.136.27:61616,tcp://192.168.136.28:61616)
-    user: laosun
-    password: laosun
+    broker-url: failover:(tcp://192.168.136.6:61616,tcp://192.168.136.7:61616,tcp://192.168.136.8:61616)
+    user: admin
+    password: admin
     packages:
       #信任所有的包
       trust-all: true
